@@ -14,7 +14,6 @@
     <sprite>sprites\idle_right</sprite>
     <sprite>sprites\jump_left</sprite>
     <sprite>sprites\jump_right</sprite>
-    <sprite>sprites\obstacle</sprite>
     <sprite>sprites\run_left</sprite>
     <sprite>sprites\run_right</sprite>
     <sprite>sprites\skull</sprite>
@@ -31,6 +30,9 @@
     <sprite>sprites\ghost_left</sprite>
     <sprite>sprites\ghost_right</sprite>
     <sprite>sprites\death</sprite>
+    <sprite>sprites\trophy</sprite>
+    <sprite>sprites\next_level</sprite>
+    <sprite>sprites\volplat</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background6</background>
@@ -46,24 +48,49 @@
     <background>background\background2</background>
     <background>background\background3</background>
     <background>background\background4</background>
+    <backgrounds name="level2">
+      <background>background\b2_1</background>
+      <background>background\b2_2</background>
+      <background>background\b2_3</background>
+      <background>background\b2_4</background>
+      <background>background\b2_5</background>
+      <background>background\b2_6</background>
+      <background>background\b2_7</background>
+      <background>background\volcanicSky</background>
+      <background>background\volMountains</background>
+      <background>background\firefog</background>
+      <background>background\rocks</background>
+      <background>background\rocks2</background>
+      <background>background\dirt</background>
+      <background>background\lava</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_death.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_ground</object>
-    <object>objects\obj_platform</object>
+    <object>objects\obj_movplat</object>
+    <object>objects\obj_movplatvol</object>
+    <object>objects\obj_volplat</object>
     <object>objects\obj_scroller_2</object>
     <object>objects\obj_scroller1</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_background1</object>
+    <object>objects\obj_background2</object>
     <object>objects\die</object>
     <object>objects\obj_char</object>
     <object>objects\obj_platWall</object>
     <object>objects\obj_ghost</object>
+    <object>objects\obj_trophy</object>
+    <object>objects\obj_checkpoint</object>
+    <object>objects\obj_nextlevel</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room4</room>
-    <room>rooms\test</room>
-    <room>rooms\room1</room>
-    <room>rooms\room2</room>
+    <room>rooms\init</room>
+    <room>rooms\Level_1</room>
+    <room>rooms\Level_2</room>
     <room>rooms\room3</room>
   </rooms>
   <help>

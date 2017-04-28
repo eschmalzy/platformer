@@ -67,7 +67,7 @@ if(place_meeting(x,y,obj_char)){
         with(obj_char){
             sprite_index = death;
             vsp = -jumpSpeed;
-            game_restart();
+            scr_death();
         }
     }
 }

@@ -47,6 +47,13 @@ jump = false;
 grounded = false;
 
 keyDown = 0;
+
+if(global.checkpointR == room){
+    x = global.checkpointx;
+    y = global.checkpointy;
+}
+
+depth = -10;
 </string>
           </argument>
         </arguments>
@@ -96,7 +103,7 @@ if (move &gt; 0){
 
 if(place_meeting(x,y+1,die)){
     sprite_index = death;
-    game_restart();
+    scr_death();
 }
 
 //see if ground is below
@@ -152,12 +159,27 @@ if(place_meeting(x, y+vsp, obj_ground)){
     vsp = 0;
 }
 
-if(place_meeting(x, y+vsp, obj_platform)){
-    while(!place_meeting(x,y+sign(vsp),obj_platform)){
+if(place_meeting(x, y+vsp, obj_movplat)){
+    while(!place_meeting(x,y+sign(vsp),obj_movplat)){
         y += sign(vsp);
     }
     vsp = 0;
 }
+
+if(place_meeting(x, y+vsp, obj_movplatvol)){
+    while(!place_meeting(x,y+sign(vsp),obj_movplatvol)){
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+
+if(place_meeting(x, y+vsp, obj_volplat)){
+    while(!place_meeting(x,y+sign(vsp),obj_volplat)){
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+
 y += vsp;
 
 //jumping

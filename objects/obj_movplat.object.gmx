@@ -28,7 +28,7 @@
             <string>sprite_index = -1;
 
 dir = -1;
-moveSpeed = 3;
+moveSpeed = 4;
 hsp = 0;
 
 
@@ -55,8 +55,7 @@ hsp = 0;
           <argument>
             <kind>1</kind>
             <string>mask_index = spr_platform;
-
-hsp= dir * moveSpeed;
+hsp = dir * moveSpeed;
 
 //horizontal collision
 if(place_meeting(x+hsp, y, obj_wall)){
@@ -73,10 +72,10 @@ if(place_meeting(x+hsp, y, obj_platWall)){
     hsp = 0;
     dir *= -1;
 }
- x += hsp;
+x += hsp;
 
 if(instance_exists(obj_char)){
-    if round((obj_char.bbox_bottom)&gt;y) || (obj_char.keyDown){
+    if (round(obj_char.y + (obj_char.sprite_height/2-30)) &gt; y || (obj_char.keyDown)){
         mask_index = -1;
     }else{
         mask_index = spr_platform;
